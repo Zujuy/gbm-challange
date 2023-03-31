@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import {HeaderStyle, Container, TitleStyle, ChartStyle } from './AppStyles.js';
 
 function IPCGraph() {
   const [ipcData, setIPCData] = useState([]);
@@ -28,10 +29,14 @@ function IPCGraph() {
 
 function App() {
   return (
-    <div>
-      <h1>IPC Indicator History</h1>
+    <Container>
+      <HeaderStyle>
+        <TitleStyle>IPC Indicator History</TitleStyle>
+      </HeaderStyle>
+      <ChartStyle>
       <IPCGraph />
-    </div>
+      </ChartStyle>
+    </Container>
   );
 }
 
