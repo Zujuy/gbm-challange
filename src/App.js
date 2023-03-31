@@ -9,15 +9,8 @@ const [ipcData, setIPCData] = useState([]);
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get('https://run.mocky.io/v3/cc4c350b-1f11-42a0-a1aa-f8593eafeb1e');
-      setIPCData(response.data);
-    }
-    fetchData()
-  }, []);
-
-  fetch("https://run.mocky.io/v3/cc4c350b-1f11-42a0-a1aa-f8593eafeb1e")
-  .then(response => response.json())
-  .then(data => {
-    const timeData = data.map(item => {
+      const {data} = response
+      const timeData = data.map(item => {
       const timeString = item.date.split('T')[1].split('.')[0];
       const hour = timeString.split(':')[0];
       return {
@@ -25,14 +18,16 @@ const [ipcData, setIPCData] = useState([]);
         Time: hour
       };
     });
-  })
-  .catch(error => console.error(error));
+      setIPCData(timeData);
+    }
+    fetchData()
+  }, [setIPCData]);
 
   return (
     <ResponsiveChart>
-    <LineChart width={800} height={400} data={ipcData}>
+    <LineChart width={900} height={400} data={ipcData}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey= "date"/>
+      <XAxis dataKey= "Time"/>
       <YAxis />
       <Tooltip />
       <Legend />
