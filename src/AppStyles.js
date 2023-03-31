@@ -6,7 +6,6 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 
   @media (max-width: 1200px) {
     padding: 20px;
@@ -17,6 +16,12 @@ export const Container = styled.div`
     padding: 0;
     justify-content: center;
   }
+`
+export const ResponsiveChart = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 `
 
 export const HeaderStyle = styled.div`
@@ -47,11 +52,9 @@ export const TitleStyle = styled.h1`
     width: 300%;
     font-size: 25px;
   }
-
 `
 
 export const ChartStyle = styled.div`
   display: flex;
   justify-content: center;
-  min-width: 300px;
 `
