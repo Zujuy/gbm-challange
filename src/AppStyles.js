@@ -23,7 +23,6 @@ export const ResponsiveChart = styled.div`
   width: 100%;
   height: 100%;
 `
-
 export const HeaderStyle = styled.div`
   display: flex;
   justify-content: center;
@@ -37,9 +36,7 @@ export const HeaderStyle = styled.div`
     flex-direction: wrap;
     padding: 20px;
   }
-
 `
-
 export const TitleStyle = styled.h1`
   font-size: 30px;
   text-align: center;
@@ -53,7 +50,6 @@ export const TitleStyle = styled.h1`
     font-size: 25px;
   }
 `
-
 export const ChartStyle = styled.div`
   display: flex;
   justify-content: center;

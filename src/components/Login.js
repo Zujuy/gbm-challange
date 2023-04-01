@@ -1,6 +1,6 @@
 import { GoogleLogin } from 'react-google-login';
 
-const clientId = "142779115631-1frq23u0od19nkrc5j5g3s8s8on7aco5.apps.googleusercontent.com";
+const client_Id = "142779115631-1frq23u0od19nkrc5j5g3s8s8on7aco5.apps.googleusercontent.com";
 
 function Login() {
 
@@ -9,13 +9,16 @@ function Login() {
     };
 
     const onFailure = (res) => {
-        return('Login failed! :( res:', res)
-    }
+        return(
+            <div>
+                <h1>'Login failed! :( res:', res)</h1>
+            </div>
+    )}
 
     return(
         <div>
             <GoogleLogin 
-                clientId={clientId}
+                clientId={client_Id}
                 buttonText="Login"
                 onSuccess={onSuccess}
                 onFailure={onFailure}
@@ -27,3 +30,5 @@ function Login() {
 };
 
 export default Login
+
+console.log(("success-->", Login()))
