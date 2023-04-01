@@ -19,5 +19,4 @@ export const Image = styled.img`
 export const LineStyles = styled.hr`
   width: 100%;
   margin-top: 30px;
-  size: 15px;
 `
