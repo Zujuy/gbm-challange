@@ -1,14 +1,15 @@
 import React from "react";
 import ImgGbm from "../assets/gbm.png";
+import { Navstyles, Imagestyles, Image } from '../styles/NavbarStyles';
 
 function Navbar() {
 
   return (
-    <nav>
-        <div>
-            <img src={ImgGbm} alt="logo"/>
-        </div>
-    </nav>
+    <Navstyles>
+        <Imagestyles>
+            <Image src={ImgGbm} alt="logo"/>
+        </Imagestyles>
+    </Navstyles>
   );
 }
 
