@@ -1,6 +1,6 @@
 import React from "react";
 import ImgGbm from "../assets/gbm.png";
-import { Navstyles, Imagestyles, Image } from '../styles/NavbarStyles';
+import { Navstyles, Imagestyles, Image, LineStyles } from '../styles/NavbarStyles';
 
 function Navbar() {
 
@@ -9,6 +9,7 @@ function Navbar() {
         <Imagestyles>
             <Image src={ImgGbm} alt="logo"/>
         </Imagestyles>
+        <LineStyles />
     </Navstyles>
   );
 }

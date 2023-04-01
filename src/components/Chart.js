@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { Container, ResponsiveChart } from '../styles/ChartStyles';
+import { Container} from '../styles/ChartStyles';
 
 function Graph(props) {
 const [ipcData, setIPCData] = useState([]);
@@ -24,7 +24,6 @@ const [ipcData, setIPCData] = useState([]);
   }, [setIPCData]);
 
   return (
-    <ResponsiveChart>
     <LineChart width={900} height={400} data={ipcData}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey= "Time"/>
@@ -33,7 +32,6 @@ const [ipcData, setIPCData] = useState([]);
       <Legend />
       <Line type="monotone" dataKey="price" stroke="#8884d8" strokeDasharray="5 5" />
     </LineChart>
-    </ResponsiveChart>
   );
 }
 

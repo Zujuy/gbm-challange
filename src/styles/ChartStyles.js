@@ -17,9 +17,3 @@ export const Container = styled.div`
     justify-content: center;
   }
 `
-export const ResponsiveChart = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-`

@@ -1,4 +1,5 @@
 import { GoogleLogout } from 'react-google-login';
+import {ButtonStyles, GoogleButonStyles } from '../styles/LogoutStyles';
 
 const client_Id = "619197449057-db5nnko9qdeb8v0b54u7muv6mppasb8j.apps.googleusercontent.com";
 
@@ -6,23 +7,21 @@ function Logout({handleLogin}) {
 
     const onLogoutSuccess = () => {
         return(
-            // <div>
-            //     <h1>'Log out successfull!'</h1>
-            // </div>
-            // );
-            console.log('Login out ok!'),
+            ('Login out ok!'),
             handleLogin(false)
         )
     };
 
     return(
-        <div>
+        <ButtonStyles>
+            <GoogleButonStyles>
             <GoogleLogout 
                 clientId={client_Id}
                 buttonText="Logout"
                 onLogoutSuccess={onLogoutSuccess}
             />
-        </div>
+            </GoogleButonStyles>
+        </ButtonStyles>
     )
 };
 
