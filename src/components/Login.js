@@ -1,18 +1,21 @@
 import { GoogleLogin } from 'react-google-login';
 
-const client_Id = "142779115631-1frq23u0od19nkrc5j5g3s8s8on7aco5.apps.googleusercontent.com";
+const client_Id = "619197449057-db5nnko9qdeb8v0b54u7muv6mppasb8j.apps.googleusercontent.com";
 
-function Login() {
+function Login({handleLogin}) {
 
     const onSuccess = (res) => {
-        return('Login Success!, current user: ', res.profileObj);
+        console.log('Login Success!, current user: ', res.profileObj);
+        handleLogin(true)
     };
 
     const onFailure = (res) => {
         return(
-            <div>
-                <h1>'Login failed! :( res:', res)</h1>
-            </div>
+            // <div>
+            //     <h1>'Login failed! :( res:', res)</h1>
+            // </div>
+            console.log('Login failed! :( res:', res),
+            handleLogin(false)
     )}
 
     return(
@@ -30,5 +33,3 @@ function Login() {
 };
 
 export default Login
-
-console.log(("success-->", Login()))
