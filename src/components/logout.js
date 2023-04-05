@@ -12,6 +12,8 @@ function Logout({handleLogin}) {
         )
     };
 
+    console.log("here",onLogoutSuccess)
+
     return(
         <ButtonStyles>
             <GoogleButonStyles>
